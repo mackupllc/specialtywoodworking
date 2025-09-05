@@ -1,0 +1,48 @@
+:root {
+  /* Brand Palette for Specialty Woodworking, Inc. */
+  --brand-primary: #5C3B1E; /* Walnut */
+  --brand-accent: #C9A66B;  /* Warm Gold */
+  --brand-dark: #2E2A27;   /* Charcoal */
+  --brand-light: #FAF7F2;  /* Off-white */
+  --brand-green: #2F4F3E;  /* Forest */
+
+  /* Map to Bootstrap CSS variables */
+  --bs-primary: var(--brand-primary);
+  --bs-primary-rgb: 92, 59, 30;
+  --bs-secondary: var(--brand-accent);
+  --bs-secondary-rgb: 201, 166, 107;
+  --bs-dark: var(--brand-dark);
+  --bs-dark-rgb: 46, 42, 39;
+  --bs-black-rgb: 46, 42, 39;
+  --bs-link-color: var(--brand-accent);
+  --bs-link-hover-color: #b8945e;
+}
+
+/* Backgrounds and text tweaks for dark theme */
+.bg-black { background-color: var(--brand-dark) !important; }
+.bg-dark { background-color: var(--brand-dark) !important; }
+.text-secondary { color: var(--brand-accent) !important; }
+
+/* Buttons tuned for brand */
+.btn-light {
+  background-color: var(--brand-light);
+  color: var(--brand-dark);
+  border-color: var(--brand-accent);
+}
+.btn-light:hover {
+  background-color: #f1e9df;
+  color: var(--brand-dark);
+  border-color: #b8945e;
+}
+.btn-white { color: var(--brand-dark); }
+
+/* Fancy link color on dark background */
+.link-fancy-light { color: var(--brand-accent); }
+.link-fancy-light:hover { color: #b8945e; }
+
+/* Navbar brand color on dark bg */
+.navbar.navbar-dark .navbar-brand { color: #fff; }
+
+/* Utility: subtle gold borders */
+.border-secondary { border-color: rgba(201, 166, 107, 0.35) !important; }
+
