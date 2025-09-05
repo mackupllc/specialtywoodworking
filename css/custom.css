@@ -46,3 +46,24 @@
 /* Utility: subtle gold borders */
 .border-secondary { border-color: rgba(201, 166, 107, 0.35) !important; }
 
+/* Header refinements */
+.navbar {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: rgba(46, 42, 39, 0.9) !important; /* subtle translucency */
+  backdrop-filter: saturate(120%) blur(6px);
+  border-bottom: 1px solid rgba(201, 166, 107, 0.25);
+}
+.brand-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+.navbar .nav-link {
+  font-weight: 400;
+  font-size: 1.05rem;
+  padding: 0.25rem 0.75rem;
+  opacity: 0.9;
+}
+.navbar .nav-link:hover { opacity: 1; }
+.navbar .nav-link.active { color: var(--brand-accent) !important; }
