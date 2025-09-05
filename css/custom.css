@@ -6,7 +6,7 @@
   --brand-light: #FAF7F2;  /* Off-white */
   --brand-green: #2F4F3E;  /* Forest */
 
-  /* Map to Bootstrap CSS variables */
+  /* Map to Bootstrap CSS variables and fonts */
   --bs-primary: var(--brand-primary);
   --bs-primary-rgb: 92, 59, 30;
   --bs-secondary: var(--brand-accent);
@@ -16,6 +16,7 @@
   --bs-black-rgb: 46, 42, 39;
   --bs-link-color: var(--brand-accent);
   --bs-link-hover-color: #b8945e;
+  --bs-body-font-family: 'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 /* Backgrounds and text tweaks for dark theme */
@@ -55,15 +56,23 @@
   border-bottom: 1px solid rgba(201, 166, 107, 0.25);
 }
 .brand-logo {
-  height: 40px;
+  height: 36px;
   width: auto;
   display: block;
 }
 .navbar .nav-link {
   font-weight: 400;
-  font-size: 1.05rem;
+  font-size: 1rem;
   padding: 0.25rem 0.75rem;
   opacity: 0.9;
 }
 .navbar .nav-link:hover { opacity: 1; }
 .navbar .nav-link.active { color: var(--brand-accent) !important; }
+
+/* Typography: use Heebo for headings, Lato for body */
+h1, h2, h3, h4, h5, h6 { font-family: 'Heebo', var(--bs-body-font-family); font-weight: 600; }
+body { font-weight: 400; letter-spacing: 0.1px; }
+
+/* Tame oversized display headings from template */
+.display-huge { font-size: clamp(2.2rem, 6vw, 3.5rem) !important; line-height: 1.1; }
+.lead { font-weight: 400; opacity: 0.95; }
