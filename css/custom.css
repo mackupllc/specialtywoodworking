@@ -17,6 +17,10 @@
   --bs-link-color: var(--brand-accent);
   --bs-link-hover-color: #b8945e;
   --bs-body-font-family: 'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  /* Softer rounding akin to WP theme */
+  --bs-border-radius: 0.5rem;
+  --bs-border-radius-lg: 0.75rem;
+  --bs-border-radius-xl: 1rem;
 }
 
 /* Backgrounds and text tweaks for dark theme */
@@ -25,6 +29,31 @@
 .text-secondary { color: var(--brand-accent) !important; }
 
 /* Buttons tuned for brand */
+.btn { border-radius: var(--bs-border-radius); }
+.btn-xl { padding: 0.85rem 1.5rem; font-size: 1.05rem; border-radius: var(--bs-border-radius-lg); }
+.btn-lg { padding: 0.7rem 1.25rem; border-radius: var(--bs-border-radius); }
+.btn-sm { padding: 0.35rem 0.75rem; border-radius: calc(var(--bs-border-radius) - 0.15rem); }
+
+.btn-primary {
+  background-color: var(--brand-accent);
+  border-color: var(--brand-accent);
+  color: var(--brand-dark);
+}
+.btn-primary:hover {
+  background-color: #b8945e;
+  border-color: #b8945e;
+  color: var(--brand-dark);
+}
+.btn-outline-primary {
+  background-color: transparent;
+  border-color: var(--brand-accent);
+  color: var(--brand-accent);
+}
+.btn-outline-primary:hover {
+  background-color: rgba(201, 166, 107, 0.15);
+  color: var(--brand-accent);
+}
+
 .btn-light {
   background-color: var(--brand-light);
   color: var(--brand-dark);
@@ -76,3 +105,8 @@ body { font-weight: 400; letter-spacing: 0.1px; }
 /* Tame oversized display headings from template */
 .display-huge { font-size: clamp(2.2rem, 6vw, 3.5rem) !important; line-height: 1.1; }
 .lead { font-weight: 400; opacity: 0.95; }
+
+/* Section spacing similar to the WP layout */
+.section { padding: 4rem 0; }
+@media (min-width: 992px) { .section { padding: 6rem 0; } }
+.section-narrow .container, .container.narrow { max-width: 980px; }
